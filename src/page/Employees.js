@@ -60,7 +60,6 @@ function Employees() {
         <div className="App">
             {showEmplyees ?
                 <>
-                    <input type='text' onChange={(e) => {console.log(e.target.value); setRole(e.target.value)}} />
                     <div className="flex flex-wrap justify-center">
                         {employees.map((employee) => {
                             const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} updateEmployee={updateEmployee}/>
