@@ -11,18 +11,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
-const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -38,7 +26,7 @@ export default function Header(props) {
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Vjezba</span>
                             <img className="h-8 w-auto" src="reactpurple.png" alt="React Logo" />
-                        </a>
+                         </a>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -53,6 +41,9 @@ export default function Header(props) {
                     <Popover.Group className="hidden lg:flex lg:gap-x-12">
                         <a href="/Employees" className="no-underline font-semibold leading-6 text-gray-900">
                             Employees
+                        </a>
+                        <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
+                            Dictionary
                         </a>
                         <a href="/Customers" className="no-underline font-semibold leading-6 text-gray-900">
                             Customers
@@ -89,6 +80,9 @@ export default function Header(props) {
                                 <div className="space-y-3 py-12 flex flex-col gap-3">
                                     <a href="/Employees" className="no-underline font-semibold leading-6 text-gray-900">
                                         Employees
+                                    </a>
+                                    <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
+                                        Dictionary
                                     </a>
                                     <a href="/Customers" className="no-underline font-semibold leading-6 text-gray-900">
                                         Customers
