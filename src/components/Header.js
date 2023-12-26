@@ -45,8 +45,8 @@ export default function Header(props) {
                         <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
                             Dictionary
                         </a>
-                        <a href="/Customers" className="no-underline font-semibold leading-6 text-gray-900">
-                            Customers
+                        <a href="/Definition" className="no-underline font-semibold leading-6 text-gray-900">
+                            Definition
                         </a>
                     </Popover.Group>
                     <div className="hidden lg:flex lg:gap-5 lg:flex-1 lg:justify-end">
@@ -84,8 +84,8 @@ export default function Header(props) {
                                     <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
                                         Dictionary
                                     </a>
-                                    <a href="/Customers" className="no-underline font-semibold leading-6 text-gray-900">
-                                        Customers
+                                    <a href="/Definition" className="no-underline font-semibold leading-6 text-gray-900">
+                                        Definition
                                     </a>
                                 </div>
                                 <div className="py-6 flex justify-between">
