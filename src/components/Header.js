@@ -1,23 +1,8 @@
 import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-    ArrowPathIcon,
-    Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
-    XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
+import { Dialog, Popover } from '@headlessui/react'
+import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 export default function Header(props) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
     return (
         <>
             <header className="bg-gray-300">
@@ -25,7 +10,7 @@ export default function Header(props) {
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Vjezba</span>
-                            <img className="h-8 w-auto" src="reactpurple.png" alt="React Logo" />
+                            <img className="h-8 w-auto" src="/reactpurple.png" alt="React Logo" />
                          </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -39,14 +24,11 @@ export default function Header(props) {
                         </button>
                     </div>
                     <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                        <a href="/Employees" className="no-underline font-semibold leading-6 text-gray-900">
-                            Employees
+                        <a href="/customers" className="no-underline font-semibold leading-6 text-gray-900">
+                            Customers
                         </a>
-                        <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
+                        <a href="/dictionary" className="no-underline font-semibold leading-6 text-gray-900">
                             Dictionary
-                        </a>
-                        <a href="/Definition" className="no-underline font-semibold leading-6 text-gray-900">
-                            Definition
                         </a>
                     </Popover.Group>
                     <div className="hidden lg:flex lg:gap-5 lg:flex-1 lg:justify-end">
@@ -64,7 +46,7 @@ export default function Header(props) {
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Vjezba</span>
-                                <img className="h-8 w-auto" src="reactpurple.png" alt="React Logo" />
+                                <img className="h-8 w-auto" src="/reactpurple.png" alt="React Logo" />
                             </a>
                             <button
                                 type="button"
@@ -78,14 +60,11 @@ export default function Header(props) {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-3 py-12 flex flex-col gap-3">
-                                    <a href="/Employees" className="no-underline font-semibold leading-6 text-gray-900">
-                                        Employees
+                                    <a href="/customers" className="no-underline font-semibold leading-6 text-gray-900">
+                                        Customers
                                     </a>
-                                    <a href="/Dictionary" className="no-underline font-semibold leading-6 text-gray-900">
+                                    <a href="/dictionary" className="no-underline font-semibold leading-6 text-gray-900">
                                         Dictionary
-                                    </a>
-                                    <a href="/Definition" className="no-underline font-semibold leading-6 text-gray-900">
-                                        Definition
                                     </a>
                                 </div>
                                 <div className="py-6 flex justify-between">
@@ -101,7 +80,9 @@ export default function Header(props) {
                     </Dialog.Panel>
                 </Dialog>
             </header>
-            {props.children}
+            <div className='px-10 py-10'>
+                {props.children}
+            </div>
         </>
     )
 }
